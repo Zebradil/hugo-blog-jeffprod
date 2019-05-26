@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
-    <link rel="stylesheet" href="{{ "css/blog.css" | absURL }}" />
+    <link rel="stylesheet" href="{{ "/css/blog.css" | relURL }}" />
     {{ with .OutputFormats.Get "RSS" }}
     <link href="{{ .RelPermalink  }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
     <link href="{{ .RelPermalink  }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
@@ -20,7 +20,7 @@
     <!-- nav -->
     <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="{{ .Site.BaseURL | absURL }}">{{ .Site.Params.logo }}</a>
+            <a class="navbar-item" href="{{ "/" | relLangURL }}">{{ .Site.Params.logo }}</a>
             <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="mainMenu">
               <span aria-hidden="true"></span>
               <span aria-hidden="true"></span>
