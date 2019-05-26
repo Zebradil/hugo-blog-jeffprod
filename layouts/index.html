@@ -5,8 +5,10 @@
     <div class="column is-9">
         <div class="tile is-child box">
             <div class="content">
-                <h3>Welcome to my blog !</h3>
+                {{ with .Site.Params.greeting }}
+                <h3>{{ . }}</h3>
                 <hr>
+                {{ end }}
                 {{ range $paginator.Pages }}
                     <article class="media">
                         <div class="media-content">
